@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #c3e3d5;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(8, 120px);
+    gap: 50px;
+}
+
+button {
+    width: 160px;
+    height: 80px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b8d0b9;
+}
+h1 {
+    font-family: Arial, sans-serif;
+    color: rgb(41, 160, 75);
+    position: absolute;
+    top: 30px;    
+    left: 100px;  
+}

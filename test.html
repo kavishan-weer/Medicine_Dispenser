@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Test</title>
+</head>
+<body>
+    <h1>Firebase Test</h1>
+    <button id="testButton">Test Firebase Connection</button>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyClYGtR-jKGmfb0GsThfVOT9oBJ4cUbpGA",
+            authDomain: "test-be728.firebaseapp.com",
+            databaseURL: "https://test-be728-default-rtdb.firebaseio.com",
+            projectId: "test-be728",
+            storageBucket: "test-be728.appspot.com",
+            messagingSenderId: "242388752196",
+            appId: "1:242388752196:web:03cb88c4417a51a2e16911",
+            measurementId: "G-M1M54CBZV8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        function testFirebaseConnection() {
+            set(ref(database, 'testConnection'), {
+                value: 'Hello Firebase!'
+            }).then(() => {
+                console.log('Test data sent to Firebase');
+                alert('Test data sent to Firebase!');
+            }).catch((error) => {
+                console.error('Error sending test data: ', error);
+                alert('Error sending test data: ' + error.message);
+            });
+        }
+
+        document.getElementById('testButton').addEventListener('click', testFirebaseConnection);
+    </script>
+</body>
+</html>
