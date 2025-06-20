@@ -2,13 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/fireba
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCu6rD1QUi0yUqD_iVgQyJ5yppMdZm42vU",
-    authDomain: "medicine-dispenser-2cf19.firebaseapp.com",
-    databaseURL: "https://medicine-dispenser-2cf19-default-rtdb.asia-southeast1.firebasedatabase.app/",
-    projectId: "medicine-dispenser-2cf19",
-    storageBucket: "medicine-dispenser-2cf19.appspot.com",
-    messagingSenderId: "193101438748",
-    appId: "1:193101438748:web:43a20c991104c7378be4d9"
+    
   };
 
 
